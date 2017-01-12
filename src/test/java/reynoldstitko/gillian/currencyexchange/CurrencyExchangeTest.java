@@ -23,9 +23,17 @@ public class CurrencyExchangeTest {
     }
 
     @Test
+    public void convertFromSourceToDestinationRateTest(){
+        currencyExchange.calculateExchangeRate("USD", "EUR");
+        Double expected = 0.94;
+        Double actual = currencyExchange.convertFromSourceToDestinationRate(1.0);
+        assertEquals("I expected 0.94", expected, actual);
+    }
+
+    @Test
     public void convertFromDollarToEuroTest() {
         Double expected = 0.94;
-        Double actual = currencyExchange.convertFromDollarToEuro("USD", "EUR");
+        Double actual = currencyExchange.convertFromDollarToEuro(1.0);
         assertEquals("I expected 0.94", expected, actual, 0.02);
         //assertEquals("I expected the exchange to be 0.94", expected, actual);
     }

@@ -36,6 +36,7 @@ public class CurrencyExchange {
     }
 
     public double convertFromSourceToDestinationRate(double amount){
+
         return amount * exchangeRate;
     }
 
