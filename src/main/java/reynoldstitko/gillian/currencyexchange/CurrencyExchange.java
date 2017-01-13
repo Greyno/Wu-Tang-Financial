@@ -11,6 +11,8 @@ public class CurrencyExchange {
     private double sourceCountryExchangeRate = 68.32;
     private double destinationCountryExchangeRate = 1.32;
     private double exchangeRate = 1.0;
+    private String sourceCountryCode;
+    private String destinationCountryCode;
 
     //Help with Map definition from Tony P
 
@@ -29,6 +31,17 @@ public class CurrencyExchange {
         currencies.put("CNY", 6.92);
     }
 
+    //Create constructors for the CurrencyExchange class
+
+    CurrencyExchange(){
+    }
+
+    CurrencyExchange(String sourceCountry, String destinationCountry, Double amount) {
+        this.sourceCountryCode = sourceCountry;
+        this.destinationCountryCode = destinationCountry;
+        this.exchangeRate = amount;
+    }
+
     public double calculateExchangeRate(String sourceCountryCode, String destinationCountryCode){
         return exchangeRate = currencies.get(destinationCountryCode)/ currencies.get(sourceCountryCode);
     }
@@ -43,15 +56,15 @@ public class CurrencyExchange {
     }
 
     public double convertFromEuroToDollar(Double amount) {
-        return (currencies.get("EUR")/currencies.get("USD"))*amount;
+        return (currencies.get("USD")/currencies.get("EUR"))*amount;
     }
 
     public double convertFromEuroToBritish(Double amount) {
-        return (currencies.get("EUR")/currencies.get("GBP"))*amount;
+        return (currencies.get("GBP")/currencies.get("EUR"))*amount;
     }
 
     public double convertFromPoundToRupee(Double amount) {
-        return (currencies.get("GBP")/currencies.get("INR"))*amount;
+        return (currencies.get("INR")/currencies.get("GBP"))*amount;
     }
 
     public double convertFromRupeeToCanadian(Double amount) {

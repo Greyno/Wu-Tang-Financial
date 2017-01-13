@@ -12,6 +12,7 @@ public class CurrencyExchangeTest {
 
     @Before
     public void setUp(){
+
         currencyExchange = new CurrencyExchange();
     }
 
@@ -32,71 +33,71 @@ public class CurrencyExchangeTest {
 
     @Test
     public void convertFromDollarToEuroTest() {
-        Double expected = 0.94;
-        Double actual = currencyExchange.convertFromDollarToEuro(1.0);
-        assertEquals("I expected 0.94", expected, actual, 0.02);
+        Double expected = 1.88;
+        Double actual = currencyExchange.convertFromDollarToEuro(2.0);
+        assertEquals("I expected 1.88", expected, actual, 0.02);
         //assertEquals("I expected the exchange to be 0.94", expected, actual);
     }
 
     @Test
     public void convertFromEuroToDollarTest() {
-        Double expected = 1.06;
-        Double actual = currencyExchange.convertFromEuroToDollar(1.0);
-        assertEquals("I expected the Euro to Dollar rate to be 1.06", expected, actual, 0.02);
+        Double expected = 2.12;
+        Double actual = currencyExchange.convertFromEuroToDollar(2.0);
+        assertEquals("I expected the Euro to Dollar rate to be 2.12", expected, actual, 0.02);
     }
 
     @Test
     public void convertFromEuroToBritishTest() {
-        Double expected = 0.87;
-        Double actual = currencyExchange.convertFromEuroToBritish(1.0);
-        assertEquals("I expected the Euro to British pound rate to be 0.87", expected, actual, 0.02);
+        Double expected = 1.74;
+        Double actual = currencyExchange.convertFromEuroToBritish(2.0);
+        assertEquals("I expected the Euro to British pound rate to be 1.74", expected, actual, 0.02);
     }
 
     @Test
     public void convertFromPoundToRupeeTest() {
-        Double expected = 83.32;
-        Double actual = currencyExchange.convertFromPoundToRupee(1.0);
-        assertEquals("I expected the British pound to Rupee rate to be 83.31", expected, actual, 0.02);
+        Double expected = 166.64;
+        Double actual = currencyExchange.convertFromPoundToRupee(2.0);
+        assertEquals("I expected the British pound to Rupee rate to be 166.64", expected, actual, 0.02);
     }
     @Test
     public void convertFromRupeeToCanadianTest() {
-        Double expected = 0.02;
-        Double actual = currencyExchange.convertFromRupeeToCanadian(1.0);
-        assertEquals("I expected the Rupee to Canadian dollar rate to be 0.02", expected, actual, 0.02);
+        Double expected = 0.04;
+        Double actual = currencyExchange.convertFromRupeeToCanadian(2.0);
+        assertEquals("I expected the Rupee to Canadian dollar rate to be 0.04", expected, actual, 0.02);
     }
 
     @Test
     public void convertFromCanadianToSingaporeTest() {
-        Double expected = 1.08;
-        Double actual = currencyExchange.convertFromCanadianToSingapore(1.0);
-        assertEquals("I expected the Canadian dollar to Singapore rate to be 1.08", expected, actual, 0.02);
+        Double expected = 2.16;
+        Double actual = currencyExchange.convertFromCanadianToSingapore(2.0);
+        assertEquals("I expected the Canadian dollar to Singapore rate to be 2.16", expected, actual, 0.02);
     }
 
     @Test
     public void convertFromSingaporeToSwissTest() {
-        Double expected = 0.71;
-        Double actual = currencyExchange.convertFromSingaporeToSwiss(1.0);
-        assertEquals("I expected the Singapore to Swiss franc rate be 0.71", expected, actual, 0.02);
+        Double expected = 1.42;
+        Double actual = currencyExchange.convertFromSingaporeToSwiss(2.0);
+        assertEquals("I expected the Singapore to Swiss franc rate be 1.42", expected, actual, 0.02);
     }
 
     @Test
     public  void convertFromSwissToMalaysianTest() {
-        Double expected = 4.43;
-        Double actual = currencyExchange.convertFromSwissToMalaysian(1.0);
-        assertEquals("I expected the Malaysian to Swiss franc rate be 4.43", expected, actual, 0.02);
+        Double expected = 8.86;
+        Double actual = currencyExchange.convertFromSwissToMalaysian(2.0);
+        assertEquals("I expected the Malaysian to Swiss franc rate be 8.86", expected, actual, 0.02);
     }
 
     @Test
     public void convertFromMalaysianToJapaneseTest(){
-        Double expected = 25.91;
-        Double actual = currencyExchange.convertFromMalaysianToJapanese(1.0);
-        assertEquals("I expected the Malaysian to Japanese yen rate be 25.91", expected, actual, 0.02);
+        Double expected = 51.82;
+        Double actual = currencyExchange.convertFromMalaysianToJapanese(2.0);
+        assertEquals("I expected the Malaysian to Japanese yen rate be 51.82", expected, actual, 0.02);
     }
 
     @Test
     public void convertFromJapaneseToYuanTest(){
-        Double expected = 0.06;
-        Double actual = currencyExchange.convertFromJapaneseToYuan(1.0);
-        assertEquals("I expected the Japanese to Chinese yuan rate be 0.06", expected, actual, 0.02);
+        Double expected = 0.12;
+        Double actual = currencyExchange.convertFromJapaneseToYuan(2.0);
+        assertEquals("I expected the Japanese to Chinese yuan rate be 0.12", expected, actual, 0.02);
     }
 }
