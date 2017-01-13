@@ -7,9 +7,7 @@ import java.util.Map;
  * Created by gillianreynolds-titko on 1/12/17.
  */
 public class CurrencyExchange {
-
-    private double sourceCountryExchangeRate = 68.32;
-    private double destinationCountryExchangeRate = 1.32;
+    
     private double exchangeRate = 1.0;
     private String sourceCountryCode;
     private String destinationCountryCode;
@@ -36,11 +34,6 @@ public class CurrencyExchange {
     CurrencyExchange(){
     }
 
-    CurrencyExchange(String sourceCountry, String destinationCountry, Double amount) {
-        this.sourceCountryCode = sourceCountry;
-        this.destinationCountryCode = destinationCountry;
-        this.exchangeRate = amount;
-    }
 
     public double calculateExchangeRate(String sourceCountryCode, String destinationCountryCode){
         return exchangeRate = currencies.get(destinationCountryCode)/ currencies.get(sourceCountryCode);
