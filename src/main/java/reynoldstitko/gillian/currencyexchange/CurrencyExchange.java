@@ -8,8 +8,6 @@ import java.util.Map;
  */
 public class CurrencyExchange {
 
-    private String sourceCountryCode = "EUR";
-    private String destinationCountryCode = "GBD";
     private double sourceCountryExchangeRate = 68.32;
     private double destinationCountryExchangeRate = 1.32;
     private double exchangeRate = 1.0;
@@ -44,40 +42,39 @@ public class CurrencyExchange {
         return (currencies.get("EUR")/currencies.get("USD"))*amount;
     }
 
-    public double convertFromEuroToDollar(String sourceCode, String destCode) {
-        return destinationCountryExchangeRate/sourceCountryExchangeRate;
+    public double convertFromEuroToDollar(Double amount) {
+        return (currencies.get("EUR")/currencies.get("USD"))*amount;
     }
 
-    public double convertFromEuroToBritish(String sourceCode, String destCode) {
-        return destinationCountryExchangeRate/sourceCountryExchangeRate;
+    public double convertFromEuroToBritish(Double amount) {
+        return (currencies.get("EUR")/currencies.get("GBP"))*amount;
     }
 
-    public double convertFromPoundToRupee(String sourceCode, String destCode) {
-        return destinationCountryExchangeRate/sourceCountryExchangeRate;
+    public double convertFromPoundToRupee(Double amount) {
+        return (currencies.get("GBP")/currencies.get("INR"))*amount;
     }
 
-    public double convertFromRupeeToCanadian(String sourceCode, String destCode) {
-        //return Math.floor(((destinationCountryExchangeRate/sourceCountryExchangeRate)*100))/100;
-        return destinationCountryExchangeRate/sourceCountryExchangeRate;
+    public double convertFromRupeeToCanadian(Double amount) {
+        return (currencies.get("CAD")/currencies.get("INR"))*amount;
     }
 
-    public double convertFromCanadianToSingapore(String sourceCode, String destCode) {
-        return destinationCountryExchangeRate/sourceCountryExchangeRate;
+    public double convertFromCanadianToSingapore(Double amount) {
+        return (currencies.get("SGD")/currencies.get("CAD"))*amount;
     }
 
-    public double convertFromSingaporeToSwiss(String sourceCode, String destCode) {
-        return destinationCountryExchangeRate/sourceCountryExchangeRate;
+    public double convertFromSingaporeToSwiss(Double amount) {
+        return (currencies.get("CHF")/currencies.get("SGD"))*amount;
     }
 
-    public double convertFromSwissToMalaysian(String sourceCode, String destCode) {
-        return destinationCountryExchangeRate/sourceCountryExchangeRate;
+    public double convertFromSwissToMalaysian(Double amount) {
+        return (currencies.get("MYR")/currencies.get("CHF"))*amount;
     }
 
-    public double convertFromMalaysianToJapanese(String sourceCode, String destCode) {
-        return destinationCountryExchangeRate/sourceCountryExchangeRate;
+    public double convertFromMalaysianToJapanese(Double amount) {
+        return (currencies.get("JPY")/currencies.get("MYR"))*amount;
     }
 
-    public double convertFromJapaneseToYuan(String sourceCode, String destCode) {
-        return destinationCountryExchangeRate/sourceCountryExchangeRate;
+    public double convertFromJapaneseToYuan(Double amount) {
+        return (currencies.get("CNY")/currencies.get("JPY"))*amount;
     }
 }
