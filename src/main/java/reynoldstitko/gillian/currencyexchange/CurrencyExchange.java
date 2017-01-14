@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by gillianreynolds-titko on 1/12/17.
  */
 public class CurrencyExchange {
-    
+
     private double exchangeRate = 1.0;
     private String sourceCountryCode;
     private String destinationCountryCode;
